@@ -42,7 +42,7 @@
             const daftarTransaksi = JSON.parse(localStorage.getItem("daftarTransaksi")) || [];
 
             if (daftarTransaksi.length === 0) {
-                transaksiContainer.innerHTML += "<center><p>Tidak ada transaksi yang tersedia.</p></center>";
+                transaksiContainer.innerHTML += "<center><p><b>Tidak ada daftar transaksi.</b></p></center>";
                 return;
             }
 
