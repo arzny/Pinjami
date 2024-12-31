@@ -538,11 +538,12 @@ h1 {
     }
 
     .table-container h1 {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .table-container table {
-        font-size: 12px;
+        font-size: 10px;
+        margin: auto;
     }
 
     .table-container table th, 
