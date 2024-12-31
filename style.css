@@ -85,6 +85,7 @@ main {
 .welcome h1 {
     font-size: 32px;
     color: white;
+    font-weight: bold;
 }
 
 .welcome p {
@@ -498,7 +499,7 @@ h1 {
 
     .welcome {
         padding: 50px;
-        margin: 170px 0;
+        margin: 160px 0;
     }
 
     .welcome h1 {
@@ -542,7 +543,7 @@ h1 {
     }
 
     .table-container table {
-        font-size: 12px;
+        font-size: 10px;
         margin-right: 50px;
     }
 
