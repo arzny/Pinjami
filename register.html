@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Pinjami</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="image/background3.jpg">
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-image: url('image/background3.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
+<body>
+    <div class="login-wrapper">
+        <div class="login-card">
+            <img src="image/background4.png" alt="Logo Pinjamin" class="login-logo">
+            <h1>Register</h1>
+            <form onsubmit="handleRegister(event)" class="login-form">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Masukkan email" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Masukkan username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+                </div>
+                <button type="submit" class="login-button"><b>Register</b></button>
+            </form>
+            <p class="login-footer">Sudah punya akun? <a href="login.html">Login di sini</a></p>
+        </div>
+    </div>
+
+    <script>
+        function handleRegister(event) {
+            event.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            const users = JSON.parse(localStorage.getItem("users")) || [];
+            users.push({ email, username, password });
+            localStorage.setItem("users", JSON.stringify(users));
+
+            alert("Registrasi berhasil! Silakan login dengan akun Anda.");
+
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>

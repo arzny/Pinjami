@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Transaksi - Pinjami</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="image/background3.jpg">
+</head>
+<body>
+    <header>
+        <img src="image/background4.png" alt="Logo Pinjami" class="logo">
+        <div class="judul">P i n j a m i</div>
+        <nav>
+            <div class="toggle-menu" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profile.html">Profil</a></li>
+                <li><a href="transaksi.html" class="active">Transaksi</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="table-container">
+            <br>
+            <center><h1>Daftar Transaksi</h1></center>
+            <table id="transaksiTable"></table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Pinjami. All Rights Reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const transaksiContainer = document.querySelector("main .table-container");
+
+            const daftarTransaksi = JSON.parse(localStorage.getItem("daftarTransaksi")) || [];
+
+            if (daftarTransaksi.length === 0) {
+                transaksiContainer.innerHTML += "<center><p>Tidak ada transaksi yang tersedia.</p></center>";
+                return;
+            }
+
+            let tableHTML = `
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Nama Transaksi</th>
+                            <th>Jumlah</th>
+                            <th>Kategori</th>
+                            <th>Bank</th>
+                            <th>Nomor Rekening</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            daftarTransaksi.forEach((transaksi) => {
+                tableHTML += `
+                    <tr>
+                        <td>${transaksi.nama}</td>
+                        <td>${transaksi.jumlah}</td>
+                        <td>${transaksi.kategori}</td>
+                        <td>${transaksi.bank}</td>
+                        <td>${transaksi.noRekening}</td>
+                    </tr>
+                `;
+            });
+
+            tableHTML += "</tbody></table>";
+            transaksiContainer.innerHTML += tableHTML;
+        });
+
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

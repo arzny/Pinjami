@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Pinjami</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="image/background3.jpg">
+</head>
+<body>
+    <header>
+        <img src="image/background4.png" alt="Logo Pinjami" class="logo">
+        <div class="judul">P i n j a m i</div>
+        <nav>
+            <div class="toggle-menu" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html" class="active">Beranda</a></li>
+                <li><a href="profile.html">Profil</a></li>
+                <li><a href="transaksi.html">Transaksi</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+            <section class="welcome">
+                <h1>Selamat Datang di Pinjami</h1>
+                <p>Kelola simpanan dan pinjaman anda dengan mudah dan aman!</p>
+                <a href="login.html" class="btn"><b>Mulai Simpan Pinjam</b></a>
+                <br><a href="#usage" class="btn"><b>Cara Penggunaan</b></a>
+            </section>
+
+        <section id="usage">
+            <div class="usage">
+            <h2>Cara Penggunaan Website</h2>
+            <ol>
+                <li><strong>Login:</strong> Masuk ke akun anda melalui halaman <a href="login.html">Login</a>.</li>
+                <li><strong>Transaksi:</strong> Pilih menu <a href="transaksi.html">Transaksi</a> untuk mencatat simpanan atau pinjaman.</li>
+                <li><strong>Riwayat Transaksi:</strong> Cek riwayat transaksi anda melalui halaman <a href="daftar_transaksi.html">Daftar Transaksi</a>.</li>
+                <li><strong>Profil:</strong> Pelajari lebih lanjut tentang aplikasi di halaman <a href="profile.html">Profil</a>.</li>
+            </ol>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Pinjami. All Rights Reserved.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+    }
+    </script>
+</body>
+</html>

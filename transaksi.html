@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaksi - Pinjami</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="image/background3.jpg">
+</head>
+<body>
+    <header>
+        <img src="image/background4.png" alt="Logo Pinjami" class="logo">
+        <div class="judul">P i n j a m i</div>
+        <nav>
+            <div class="toggle-menu" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profile.html">Profil</a></li>
+                <li><a href="transaksi.html" class="active">Transaksi</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="form-container">
+            <form id="transaksiForm">
+                <table class="form-table">
+                    <tr>
+                        <td><label for="nama">Nama Transaksi:</label></td>
+                        <td><input type="text" id="nama" name="nama" placeholder="Masukkan nama transaksi" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="jumlah">Jumlah:</label></td>
+                        <td><input type="number" id="jumlah" name="jumlah" placeholder="Masukkan jumlah" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="kategori">Kategori:</label></td>
+                        <td>
+                            <select id="kategori" name="kategori" required>
+                                <option value="">Pilih Kategori</option>
+                                <option value="Simpanan">Simpanan</option>
+                                <option value="Pinjaman">Pinjaman</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="bank">Pilih Bank:</label></td>
+                        <td>
+                            <select id="bank" name="bank" required>
+                                <option value="">Pilih Bank</option>
+                                <option value="BRI">BRI</option>
+                                <option value="BCA">BCA</option>
+                                <option value="Mandiri">Mandiri</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="noRekening">Nomor Rekening:</label></td>
+                        <td><input type="text" id="noRekening" name="noRekening" placeholder="Masukkan nomor rekening" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <button type="submit" class="btn"><b>Simpan</b></button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+        <section class="button-container">
+            <center>
+                <a href="daftar_transaksi.html" class="btn"><b>Lihat Daftar Transaksi</b></a>
+            </center>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Pinjami. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById("transaksiForm");
+    
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); 
+    
+            const nama = document.getElementById("nama").value.trim();
+            const jumlah = document.getElementById("jumlah").value.trim();
+            const kategori = document.getElementById("kategori").value.trim();
+            const bank = document.getElementById("bank").value.trim();
+            const noRekening = document.getElementById("noRekening").value.trim();
+    
+            const transaksi = { nama, jumlah, kategori, bank, noRekening };
+            let daftarTransaksi = JSON.parse(localStorage.getItem("daftarTransaksi")) || [];
+            daftarTransaksi.push(transaksi);
+            localStorage.setItem("daftarTransaksi", JSON.stringify(daftarTransaksi));
+    
+            alert("Transaksi berhasil disimpan!");
+
+            window.location.href = "daftar_transaksi.html";
+        });
+
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

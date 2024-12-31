@@ -1,0 +1,623 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-image: url('image/background3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Header */
+header {
+    background-color:#80e1c4;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .judul{
+    text-align: left;
+    color: white;
+    font-size: 21px;
+    text-transform: uppercase;
+    margin: 0;
+    text-decoration: underline;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+header .logo {
+    height: 45px;
+    margin-right: 10px;
+}
+
+/* Navigasi */
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 15px;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background-color: #65b19a;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Welcome */
+.welcome {
+    text-align: center;
+    margin-top: 100px;
+    padding: 50px 20px;
+    background: rgba(117, 205, 178, 0.7);
+    color: white;
+    border-radius: 10px;
+}
+
+.welcome h1 {
+    font-size: 32px;
+    color: white;
+}
+
+.welcome p {
+    font-size: 18px;
+    color: black;
+}
+
+.welcome .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #87e9cc;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.welcome .btn:hover {
+    background-color: #65b19a;
+    transform: translateY(-2px);
+}
+
+.welcome .btn:active {
+    transform: translateY(0);
+}
+
+/* Profile */
+.about {
+    margin: 70px 0;
+    padding: 50px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px 4px rgb(14 55 54 / 15%);
+}
+
+.about h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about ul {
+    margin: 15px 0;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+/* Beranda */
+.usage {
+    padding: 50px;
+    margin-top: 200px;
+    margin-bottom: 130px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px 4px rgb(14 55 54 / 15%);
+}
+
+.usage h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.usage p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.usage ol {
+    padding-left: 20px;
+    list-style-type: decimal;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.usage a {
+    color: #80e1c4;
+    text-decoration: none;
+}
+
+.usage a:hover {
+    text-decoration: underline;
+}
+
+/* Form Transaksi */
+.form-table {
+    width: 100%;
+    max-width: 600px;
+    margin: 70px auto 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.form-table td {
+    padding: 10px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: middle;
+}
+
+.form-table td:last-child {
+    text-align: right;
+}
+
+.form-table tr:last-child td {
+    border-bottom: none;
+}
+
+.form-table label {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-table input,
+.form-table select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.form-table input:focus,
+.form-table select:focus {
+    outline: none;
+    border-color: #80e1c4;
+    box-shadow: 0 0 8px rgba(128, 225, 196, 0.5);
+    background-color: #ffffff;
+}
+
+.form-table .btn {
+    padding: 8px 25px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #80e1c4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.form-table .btn:hover {
+    background-color: #65b19a;
+    transform: translateY(-2px);
+}
+
+.form-table .btn:active {
+    transform: translateY(0);
+}
+
+/* Daftar Transaksi */
+.table-container {
+    margin-top: 40px;
+}
+
+.table-container h1{
+    font-size: 35px;
+    color: #497f6f;
+    border-color: black;
+    outline: none;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px 4px rgb(14 55 54 / 15%);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+table thead {
+    background-color: #87e9cc;
+    color: white;
+}
+
+table tbody {
+    background-color: #f1f1f1;
+}
+
+/* Button Daftar Transaksi */
+.button-container .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #80e1c4;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 80px;
+}
+
+.button-container .btn:hover {
+    background-color: #65b19a;
+    transform: translateY(-2px);
+}
+
+.button-container .btn:active {
+    transform: translateY(0);
+}
+
+/* Footer */
+footer {
+    background-color: #80e1c4;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Login n Regist */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-card {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+.login-logo {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.login-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.login-form label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: #80e1c4;
+    box-shadow: 0 0 5px rgba(79, 172, 254, 0.5);
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #80e1c4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #65b19a;
+}
+
+.login-footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.login-footer a {
+    color: #65b19a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Untuk Layar Lebar */
+@media (max-width: 1250px) {
+    header {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    }
+
+    header .judul {
+        margin-right: 100px;
+        font-size: 18px;
+    }
+
+    nav ul .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 15px;
+    }
+
+    nav ul .menu li {
+        margin: 5px 0;
+    }
+
+    .welcome {
+        margin-top: 110px;
+        padding: 30px 15px;
+    }
+
+    .welcome h1 {
+        font-size: 24px;
+    }
+
+    .welcome p {
+        font-size: 14px;
+    }
+
+    .form-table {
+        margin-top: 170px;
+        padding: 10px;
+    }
+
+    .usage {
+        margin: 80px 10px;
+        padding: 20px;
+    }
+
+    .about {
+        margin: 130px 0;
+        padding: 30px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+/* Untuk Ponsel */
+@media (max-width: 700px) {
+    body {
+        background-size: cover; 
+        background-attachment: fixed; 
+        background-position: center; 
+    }
+
+    header {
+        flex-wrap: nowrap;
+    }
+
+    header .judul {
+        font-size: 18px;
+    }
+
+    nav {
+        margin-left: auto;
+    }
+
+    .welcome {
+        padding: 50px;
+        margin: 170px 0;
+    }
+
+    .welcome h1 {
+        font-size: 25px;
+    }
+
+    .welcome p {
+        font-size: 16px;
+    }
+
+    .welcome .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .usage {
+        margin-top: 100px;
+    }
+
+    .about {
+        margin: 130px 0;
+        padding: 30px;
+    }
+
+    .form-table td {
+        padding: 8px;
+    }
+
+    .form-table input, .form-table select {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .form-table .btn {
+        padding: 7px 20px;
+        font-size: 14px;
+    }
+
+    .table-container h1 {
+        font-size: 30px;
+    }
+
+    .table-container table {
+        font-size: 12px;
+    }
+
+    .table-container table th, 
+    .table-container table td {
+        padding: 8px 10px;
+    }
+
+    .table-container table {
+        width: 100%;
+        overflow-x: auto; 
+    }
+
+    .button-container .btn {
+        padding: 7px 20px;
+        font-size: 14px;
+    }
+
+    nav ul li {
+        margin: 3px 0;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    nav .toggle-menu {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav .toggle-menu div {
+        background-color: white;
+        height: 3px;
+        width: 25px;
+        margin: 3px 30px;
+        transition: 0.3s;
+    }
+
+    nav .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        width: 150px;
+        border-radius: 5px;
+        z-index: 1000;
+    }
+    
+    nav .menu.active {
+        display: flex;
+    }
+    
+    nav .menu li {
+        margin: 5px 0;
+        text-align: center;
+    }
+    
+    nav .menu li a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+    }
+    
+    nav .menu li a:hover {
+        background-color: #555;
+    }
+
+    .login-card {
+        margin: auto;
+    }
+}
