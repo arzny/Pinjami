@@ -542,13 +542,13 @@ h1 {
     }
 
     .table-container table {
-        font-size: 12px;
+        font-size: 13px;
         margin-right: 50px;
     }
 
     .table-container table th, 
     .table-container table td {
-        padding: 8px 3px;
+        padding: 8px 4px;
     }
 
     .table-container table {
