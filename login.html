@@ -49,6 +49,7 @@
     
             if (username && password) {
                 alert("Berhasil login! Selamat datang, " + username + ".");
+                sessionStorage.setItem("isLoggedIn", "true"); 
                 window.location.href = "transaksi.html";
             } else {
                 alert("Username atau password tidak boleh kosong!");
