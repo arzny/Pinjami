@@ -487,6 +487,7 @@ h1 {
 
     header {
         flex-wrap: nowrap;
+        background-color: #80e1c4;
     }
 
     header .judul {
