@@ -574,16 +574,18 @@ h1 {
     nav .toggle-menu {
         display: flex;
         flex-direction: column;
-        cursor: pointer;
-        align-items: center;
         justify-content: center;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
     }
 
-    nav .toggle-menu div {
-        background-color: white;
+    nav .toggle-menu .dot {
+        width: 3px;
         height: 3px;
-        width: 25px;
-        margin: 3px 30px;
+        background-color: white;
+        border-radius: 50%;
+        margin: 0 40px;
         transition: 0.3s;
     }
 
