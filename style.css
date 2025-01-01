@@ -590,7 +590,7 @@ h1 {
     nav .menu {
         display: none;
         flex-direction: column;
-        background-color: #333;
+        background-color: #80e1c4;
         position: absolute;
         top: 50px;
         right: 10px;
@@ -616,7 +616,7 @@ h1 {
     }
     
     nav .menu li a:hover {
-        background-color: #555;
+        background-color: #65b19a;
     }
 
     .login-card {
