@@ -590,7 +590,7 @@ h1 {
     nav .menu {
         display: none;
         flex-direction: column;
-        background-color: #80e1c4;
+        background-color: #333;
         position: absolute;
         top: 50px;
         right: 10px;
