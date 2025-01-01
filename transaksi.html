@@ -21,7 +21,7 @@
                 <li><a href="index.html">Beranda</a></li>
                 <li><a href="profile.html">Profil</a></li>
                 <li><a href="transaksi.html" class="active">Transaksi</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="login.html" id="auth-link">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -101,11 +101,37 @@
 
             window.location.href = "daftar_transaksi.html";
         });
+    </script>
 
+    <script>
         function toggleMenu() {
             const menu = document.querySelector('.menu');
             menu.classList.toggle('active');
         }
+    </script>
+    
+    <script>
+        function updateAuthLink() {
+            const authLink = document.getElementById("auth-link");
+    
+            const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+    
+            if (isLoggedIn === "true") {
+                authLink.textContent = "Logout";
+                authLink.href = "#";
+                authLink.onclick = function () {
+                    sessionStorage.removeItem("isLoggedIn");
+                    alert("Anda telah logout.");
+                    location.href = "index.html";
+                };
+            } else {
+                authLink.textContent = "Login";
+                authLink.href = "login.html";
+                authLink.onclick = null;
+            }
+        }
+    
+        document.addEventListener("DOMContentLoaded", updateAuthLink);
     </script>
 </body>
 </html>
